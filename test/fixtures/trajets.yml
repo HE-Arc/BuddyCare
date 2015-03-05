@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  userBeneficiaireID: 1
+  userAuteurID: 1
+  departVille: MyString
+  arriveeVille: MyString
+  distance: 1.5
+  prix: 1.5
+  nbPlacesDisponible: 1
+  date: 2015-02-27 13:13:45
+
+two:
+  id: 1
+  userBeneficiaireID: 1
+  userAuteurID: 1
+  departVille: MyString
+  arriveeVille: MyString
+  distance: 1.5
+  prix: 1.5
+  nbPlacesDisponible: 1
+  date: 2015-02-27 13:13:45

@@ -1,0 +1,53 @@
+<%= form_for(@trajet) do |f| %>
+  <% if @trajet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trajet.errors.count, "error") %> prohibited this trajet from being saved:</h2>
+
+      <ul>
+      <% @trajet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br>
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :userBeneficiaireID %><br>
+    <%= f.number_field :userBeneficiaireID %>
+  </div>
+  <div class="field">
+    <%= f.label :userAuteurID %><br>
+    <%= f.number_field :userAuteurID %>
+  </div>
+  <div class="field">
+    <%= f.label :departVille %><br>
+    <%= f.text_field :departVille %>
+  </div>
+  <div class="field">
+    <%= f.label :arriveeVille %><br>
+    <%= f.text_field :arriveeVille %>
+  </div>
+  <div class="field">
+    <%= f.label :distance %><br>
+    <%= f.text_field :distance %>
+  </div>
+  <div class="field">
+    <%= f.label :prix %><br>
+    <%= f.text_field :prix %>
+  </div>
+  <div class="field">
+    <%= f.label :nbPlacesDisponible %><br>
+    <%= f.number_field :nbPlacesDisponible %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

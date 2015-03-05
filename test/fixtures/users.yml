@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  pseudo: MyString
+  password: MyString
+  email: MyString
+  solde: 1.5
+  note: 9.99
+
+two:
+  id: 1
+  pseudo: MyString
+  password: MyString
+  email: MyString
+  solde: 1.5
+  note: 9.99

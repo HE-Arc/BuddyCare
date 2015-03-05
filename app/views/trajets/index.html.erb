@@ -1,0 +1,41 @@
+<h1>Listing trajets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Userbeneficiaireid</th>
+      <th>Userauteurid</th>
+      <th>Departville</th>
+      <th>Arriveeville</th>
+      <th>Distance</th>
+      <th>Prix</th>
+      <th>Nbplacesdisponible</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trajets.each do |trajet| %>
+      <tr>
+        <td><%= trajet.id %></td>
+        <td><%= trajet.userBeneficiaireID %></td>
+        <td><%= trajet.userAuteurID %></td>
+        <td><%= trajet.departVille %></td>
+        <td><%= trajet.arriveeVille %></td>
+        <td><%= trajet.distance %></td>
+        <td><%= trajet.prix %></td>
+        <td><%= trajet.nbPlacesDisponible %></td>
+        <td><%= trajet.date %></td>
+        <td><%= link_to 'Show', trajet %></td>
+        <td><%= link_to 'Edit', edit_trajet_path(trajet) %></td>
+        <td><%= link_to 'Destroy', trajet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trajet', new_trajet_path %>

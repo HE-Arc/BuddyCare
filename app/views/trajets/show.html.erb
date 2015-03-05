@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @trajet.id %>
+</p>
+
+<p>
+  <strong>Userbeneficiaireid:</strong>
+  <%= @trajet.userBeneficiaireID %>
+</p>
+
+<p>
+  <strong>Userauteurid:</strong>
+  <%= @trajet.userAuteurID %>
+</p>
+
+<p>
+  <strong>Departville:</strong>
+  <%= @trajet.departVille %>
+</p>
+
+<p>
+  <strong>Arriveeville:</strong>
+  <%= @trajet.arriveeVille %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @trajet.distance %>
+</p>
+
+<p>
+  <strong>Prix:</strong>
+  <%= @trajet.prix %>
+</p>
+
+<p>
+  <strong>Nbplacesdisponible:</strong>
+  <%= @trajet.nbPlacesDisponible %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @trajet.date %>
+</p>
+
+<%= link_to 'Edit', edit_trajet_path(@trajet) %> |
+<%= link_to 'Back', trajets_path %>
