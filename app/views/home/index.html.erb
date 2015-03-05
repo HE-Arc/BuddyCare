@@ -15,7 +15,7 @@
                     <li><a href="/#home">ACCUEIL</a></li>
                     <!--<li><a href="#services">SERVICES</a></li>-->
                     <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="#login">LOGIN</a></li>
+                    <li><a href="#" data-rel="popup3" class="poplight">LOGIN</a></li>
                 </ul>
             </div>
         </div>
@@ -23,8 +23,6 @@
     <!-- NAVBAR CODE END -->
     <div id="home">
       <div class="post">
-		<h2>TEST</h2>
-        <a href="#" data-width="350" data-rel="popup3" class="poplight">Voir la pop-up - Width = 350px</a>
 		</div>
         <div class="overlay">
             <!-- overylay class usage -->
@@ -54,13 +52,38 @@
 
 
 <div id="popup3" class="popup_block">
-	<a href="http://www.designbombs.com"><img src="bomber.gif" alt="Lil bomb dude" style="float: right; margin: 80px 0 0 20px;" /></a>
-    <h2>Popup #3</h2>
-    <pre>&lt;a href=&quot;#?w=350&quot; rel=&quot;popup3&quot; class=&quot;poplight&quot;&gt;</pre>
-
-    <p>Aliquip transverbero loquor esse ille vulputate exerci veniam fatua eros similis illum valde. Praesent, venio conventio rusticus antehabeo lenis. Melior pertineo feugait, praesent hos rusticus et haero facilisis abluo. </p>
-    <p>Veniam tincidunt augue abluo vero, augue nisl melior quidem secundum nobis singularis eum eum.</p><p><strong>Besoin d'inspiration ?</strong> Visitez <a href="http://www.designbombs.com">Design Bombs</a></p>
-    
+	<div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h1 class="text-center">Login</h1>
+      </div>
+      <div class="modal-body">
+          <form class="form col-md-12 center-block">
+            <div class="form-group">
+              <input type="text" class="form-control input-lg" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control input-lg" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary btn-lg btn-block">Sign In</button>
+              <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+          <div class="col-md-12">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+		  </div>	
+      </div>
+  </div>
+  </div>
+</div>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 </div>
 
 
@@ -74,17 +97,17 @@ jQuery(function($){
 		var popWidth = $(this).data('width'); //Gets Popup Width
 
 		//Fade in the Popup and add close button
-		$('#' + popID).fadeIn().css({ 'width': popWidth}).prepend('<a href="#" class="close"><img src="close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>');
+		$('#' + popID).fadeIn().css({ 'width': popWidth}).prepend('');
 		
 		//Define margin for center alignment (vertical + horizontal) - we add 80 to the height/width to accomodate for the padding + border width defined in the css
-		var popMargTop = ($('#' + popID).height() + 80) / 2;
-		var popMargLeft = ($('#' + popID).width() + 80) / 2;
+		//var popMargTop = ($('#' + popID).height() + 80) / 2;
+		//var popMargLeft = ($('#' + popID).width() + 80) / 2;
 		
 		//Apply Margin to Popup
-		$('#' + popID).css({ 
-			'margin-top' : -popMargTop,
-			'margin-left' : -popMargLeft
-		});
+		//$('#' + popID).css({ 
+			//'margin-top' : -popMargTop,
+			//'margin-left' : -popMargLeft
+		//});
 		
 		//Fade in Background
 		$('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
@@ -125,7 +148,7 @@ jQuery(function($){
 	float: left;
 	font-size: 1.2em;
 	position: fixed;
-	top: 50%; left: 50%;
+	top: 100%; left: 100%;
 	z-index: 99999;
 	-webkit-box-shadow: 0px 0px 20px #000;
 	-moz-box-shadow: 0px 0px 20px #000;
