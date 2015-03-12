@@ -75,6 +75,6 @@ test:
 production:
   <<: *default
   database: BuddyCar_production
-  username: rails
-  password: Rails2015
+  username: BuddyCar
+  password: BuddyCar
   host: localhost
