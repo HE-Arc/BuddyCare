@@ -75,6 +75,6 @@ test:
 production:
   <<: *default
   database: BuddyCar_production
-  username: BuddyCar
-  password: BuddyCar
+  username: buddycar
+  password: buddycar
   host: localhost
