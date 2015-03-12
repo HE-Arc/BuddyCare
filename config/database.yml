@@ -74,6 +74,7 @@ test:
 #
 production:
   <<: *default
-  database: devWebRails_production
-  username: devWebRails
-  password: <%= ENV['DEVWEBRAILS_DATABASE_PASSWORD'] %>
+  database: BuddyCar_production
+  username: rails
+  password: Rails2015
+  host: localhost
