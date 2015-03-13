@@ -12,10 +12,13 @@
             </div>
             <div class="navbar-collapse collapse navbar-right scroll-me">
                 <ul class="nav navbar-nav ">
-                    <li><a href="/#home">ACCUEIL</a></li>
                     <!--<li><a href="#services">SERVICES</a></li>-->
-                    <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="#" data-rel="popup3" class="poplight">LOGIN</a></li>
+                    <!--<li><a href="#contact">CONTACT</a></li>-->
+                  <li><%= link_to 'ACCUEIL', root_path %></li>
+                  <li><%= link_to 'CONTACT', contact_path %></li>
+                  <li><%= link_to 'LOGIN', new_user_path %></li>
+ 
+                    <!--<li><a href="#" data-rel="popup3" class="poplight">LOGIN</a></li>-->
                 </ul>
             </div>
         </div>
@@ -50,7 +53,7 @@
     </footer>
     
 
-
+<!--
 <div id="popup3" class="popup_block">
 	<div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
@@ -81,7 +84,7 @@
   </div>
   </div>
 </div>
-	<!-- script references -->
+	<!-- script references 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 </div>
@@ -174,3 +177,4 @@ img.btn_close {
 }
   
 </script>
+  -->
