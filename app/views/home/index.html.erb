@@ -1,3 +1,4 @@
+
 <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -10,13 +11,14 @@
                     <!--<img src="/assets/images/audio.png" alt="" />-->
                 </a>
             </div>
-            <div class="navbar-collapse collapse navbar-right scroll-me">
+            <div class="navbar-right">
                 <ul class="nav navbar-nav ">
                     <!--<li><a href="#services">SERVICES</a></li>-->
                     <!--<li><a href="#contact">CONTACT</a></li>-->
                   <li><%= link_to 'ACCUEIL', root_path %></li>
                   <li><%= link_to 'CONTACT', contact_path %></li>
-                  <li><%= link_to 'LOGIN', new_user_path %></li>
+                  <li><!--<%= link_to 'LOGIN', new_user_path %></li>-->
+                    <a href="#openModal">LOGIN</a></li>
  
                     <!--<li><a href="#" data-rel="popup3" class="poplight">LOGIN</a></li>-->
                 </ul>
@@ -46,6 +48,37 @@
             </div>
         </div>
 
+      
+
+<div id="openModal" class="modalDialog">
+	<div>
+		<div class="panel-heading">
+                        <h3 class="panel-title">Sign In</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                    </label>
+                                </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <a href="javascript:;" class="btn btn-sm btn-success">Login</a>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+</div>
+
+
+      
     </div>
     <!--HOME SECTION END  -->
     <footer>
@@ -53,128 +86,59 @@
     </footer>
     
 
-<!--
-<div id="popup3" class="popup_block">
-	<div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-  <div class="modal-content">
-      <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h1 class="text-center">Login</h1>
-      </div>
-      <div class="modal-body">
-          <form class="form col-md-12 center-block">
-            <div class="form-group">
-              <input type="text" class="form-control input-lg" placeholder="Email">
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control input-lg" placeholder="Password">
-            </div>
-            <div class="form-group">
-              <button class="btn btn-primary btn-lg btn-block">Sign In</button>
-              <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>
-            </div>
-          </form>
-      </div>
-      <div class="modal-footer">
-          <div class="col-md-12">
-          <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-		  </div>	
-      </div>
-  </div>
-  </div>
-</div>
-	<!-- script references 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-</div>
 
+<style>
+	.modalDialog {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 99999;
+		opacity:0;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		pointer-events: none;
+	}
 
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script>
-jQuery(function($){
-						   		   
-	//When you click on a link with class of poplight and the href starts with a # 
-	$('a.poplight').on('click', function() {
-		var popID = $(this).data('rel'); //Get Popup Name
-		var popWidth = $(this).data('width'); //Gets Popup Width
+	.modalDialog:target {
+		opacity:1;
+		pointer-events: auto;
+	}
 
-		//Fade in the Popup and add close button
-		$('#' + popID).fadeIn().css({ 'width': popWidth}).prepend('');
-		
-		//Define margin for center alignment (vertical + horizontal) - we add 80 to the height/width to accomodate for the padding + border width defined in the css
-		//var popMargTop = ($('#' + popID).height() + 80) / 2;
-		//var popMargLeft = ($('#' + popID).width() + 80) / 2;
-		
-		//Apply Margin to Popup
-		//$('#' + popID).css({ 
-			//'margin-top' : -popMargTop,
-			//'margin-left' : -popMargLeft
-		//});
-		
-		//Fade in Background
-		$('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
-		$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer 
-		
-		return false;
-	});
-	
-	
-	//Close Popups and Fade Layer
-	$('body').on('click', 'a.close, #fade', function() { //When clicking on the close or fade layer...
-		$('#fade , .popup_block').fadeOut(function() {
-			$('#fade, a.close').remove();  
-	}); //fade them both out
-		
-		return false;
-	});
+	.modalDialog > div {
+		width: 400px;
+		position: relative;
+		margin: 10% auto;
+		padding: 5px 20px 13px 20px;
+		border-radius: 10px;
+		background: #fff;
+		background: -moz-linear-gradient(#fff, #999);
+		background: -webkit-linear-gradient(#fff, #999);
+		background: -o-linear-gradient(#fff, #999);
+	}
 
-	
-});
-</script>
+	.close {
+		background: #606061;
+		color: #FFFFFF;
+		line-height: 25px;
+		position: absolute;
+		right: -12px;
+		text-align: center;
+		top: -10px;
+		width: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
 
-<style type="text/css">
- #fade {
-	display: none;
-	background: #000; 
-	position: fixed; left: 0; top: 0; 
-	z-index: 10;
-	width: 100%; height: 100%;
-	opacity: .80;
-	z-index: 9999;
-}
-.popup_block{
-	display: none;
-	background: #fff;
-	padding: 20px; 	
-	border: 20px solid #ddd;
-	float: left;
-	font-size: 1.2em;
-	position: fixed;
-	top: 100%; left: 100%;
-	z-index: 99999;
-	-webkit-box-shadow: 0px 0px 20px #000;
-	-moz-box-shadow: 0px 0px 20px #000;
-	box-shadow: 0px 0px 20px #000;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-}
-img.btn_close {
-	float: right; 
-	margin: -55px -55px 0 0;
-}
-.popup p {
-	padding: 5px 10px;
-	margin: 5px 0;
-}
-/*--Making IE6 Understand Fixed Positioning--*/
-*html #fade {
-	position: absolute;
-}
-*html .popup_block {
-	position: absolute;
-}
-  
-</script>
-  -->
+	.close:hover { background: #00d9ff; }
+	</style>
