@@ -18,7 +18,7 @@
                   <li><%= link_to 'ACCUEIL', root_path %></li>
                   <li><%= link_to 'CONTACT', contact_path %></li>
                   <li><!--<%= link_to 'LOGIN', new_user_path %></li>-->
-                    <a href="#openModal">LOGIN</a></li>
+                    <a href="#login">LOGIN</a></li>
  
                     <!--<li><a href="#" data-rel="popup3" class="poplight">LOGIN</a></li>-->
                 </ul>
@@ -41,16 +41,14 @@
                   <br>
                         <h3>Voyagez moins cher grâce à BuddyCare, un site de covoiturage totalement gratuit pour trouver vos meilleures destinations</h3>
                   <br>
-                  <p><a><%= link_to 'REJOIGNEZ TOUT DE SUITE LA COMMUNAUTE', new_user_path %></a></p>
+                  <p><a href="#register">REJOIGNEZ TOUT DE SUITE LA COMMUNAUTE</a></p>
                       
                 </div>
 
             </div>
         </div>
 
-      
-
-<div id="openModal" class="modalDialog">
+<div id="login" class="modalDialog">
 	<div>
 		<div class="panel-heading">
                         <h3 class="panel-title">Sign In</h3>
@@ -78,6 +76,39 @@
                         </form>
                     </div>
                 </div>
+</div>
+      
+      
+      
+<div id="register" class="modalDialog">
+	  <div>
+		    <div class="panel-heading">
+              <h3 class="panel-title">Register</h3>
+          </div>
+          <div class="panel-body">
+            <div>
+              <span class="close"><a href="#">X</a></span>
+            </div>
+            <form role="form">
+              <fieldset>
+                <div class="form-group">
+                  <input class="form-control" placeholder="Pseudo" name="pseudo" type="text" autofocus="">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus="">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" placeholder="Password Confirm" name="passwordConfirm" type="password" value="">
+                </div>
+                <!-- Change this to a button or input when using this as a form -->
+                <a href="javascript:;" class="btn btn-sm btn-success">Register</a>
+              </fieldset>
+            </form>
+          </div>
+       </div>
 </div>
 
 
