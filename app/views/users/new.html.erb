@@ -1,5 +1,51 @@
-<h1>New user</h1>
 
-<%= render 'form' %>
 
-<%= link_to 'Back', users_path %>
+
+                                    
+<!--<%= render 'form' %>-->
+<%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+<div class="container">
+  <h1>S'enregistrer</h1>
+  <br>
+      <label for="firstname" class="col-md-9 control-label">Pseudo : </label>
+      <div class="col-md-9">
+        <p><%= f.text_field :pseudo, :placeholder => "Votre Pseudo", class: "form-control"%> </p>
+      </div>
+  <label for="firstname" class="col-md-9 control-label">E-mail : </label>
+      <div class="col-md-9">
+        <p><%= f.text_field :email, :placeholder => "exemple@exemple.com", class: "form-control"%> </p>
+      </div>
+  <label for="firstname" class="col-md-9 control-label">Mot de passe : </label>
+      <div class="col-md-9">
+        <p><%= f.password_field :password, class: "form-control"%> </p>
+      </div>
+  <div class="form-group">
+      <!-- Button -->                                        
+      <div class="col-md-9">
+        <%= f.submit "Enregistrer", class: "btn btn-info"%> 
+        <span style="margin-left:8px;"></span>  
+        <% if @user.errors.any? %>
+<ul class="Signup_Errors">
+<% for message_error in @user.errors.full_messages %>
+<li>* <%= message_error %></li>
+<% end %>
+</ul>
+<% end %> 
+
+  <% end %>
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+                              
+<!--<%= link_to 'Back', users_path %>-->
+
+          
+
+           
