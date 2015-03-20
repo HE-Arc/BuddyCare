@@ -15,10 +15,15 @@
                 <ul class="nav navbar-nav ">
                     <!--<li><a href="#services">SERVICES</a></li>-->
                     <!--<li><a href="#contact">CONTACT</a></li>-->
-                  <li><%= link_to 'ACCUEIL', root_path %></li>
+                  <!--<li><%= link_to 'ACCUEIL', root_path %></li>
                   <li><%= link_to 'CONTACT', contact_path %></li>
-                  <li><!--<%= link_to 'LOGIN', new_user_path %></li>-->
-                    <a href="#openModal">LOGIN</a></li>
+                  <li><!--<%= link_to 'LOGIN' %></li>
+                    <a href="#openModal">LOGIN</a></li>-->
+                              <li><%= link_to "Home", root_path %></li>
+                              <%= render 'devise/menus/registration_items' %>
+                              <%= render 'devise/menus/login_items' %>
+                              <li><%= link_to "Contact", contact_path %></li>
+
  
                     <!--<li><a href="#" data-rel="popup3" class="poplight">LOGIN</a></li>-->
                 </ul>
@@ -41,7 +46,7 @@
                   <br>
                         <h3>Voyagez moins cher grâce à BuddyCare, un site de covoiturage totalement gratuit pour trouver vos meilleures destinations</h3>
                   <br>
-                  <p><a><%= link_to 'REJOIGNEZ TOUT DE SUITE LA COMMUNAUTE', new_user_path %></a></p>
+                  <p><a><%= link_to 'REJOIGNEZ TOUT DE SUITE LA COMMUNAUTE', new_user_registration_path %></a></p>
                       
                 </div>
 
