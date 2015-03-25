@@ -11,22 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
+//= require underscore
+//= require gmaps/google
 //= require_tree .
-$(document).on('submit', '#login_form', function(e) {
-            //do stuff here
-}).on('ajax:success', '#login_form', function(e, data, status, xhr) {
-        //do stuff here 
-}).on('ajax:error', '#login_form', function(e, data, status, xhr) {
-        //do stuff here
-});
-
-$(document).on('submit', '#register_form', function(e){
-    //do stuff here
-}).on('ajax:success', '#register_form', function(e, data, status, xhr) {
-    //do stuff here
-}).on('ajax:error', '#register_form', function(e, data, status, xhr) {
-       //do stuff here  
-});
