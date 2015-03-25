@@ -16,8 +16,8 @@
                     <!--<li><a href="#services">SERVICES</a></li>-->
                     <!--<li><a href="#contact">CONTACT</a></li>-->
                   <!--<li><%= link_to 'ACCUEIL', root_path %></li>
-                  <li><%= link_to 'CONTACT', contact_path %></li>
-                  <li><!--<%= link_to 'LOGIN' %></li>
+                  <li><%= link_to 'CONTACT', contact_path %></li>-->
+                  <!--<li><%= link_to 'LOGIN' %></li>
                     <a href="#openModal">LOGIN</a></li>-->
                               <li><%= link_to "Home", root_path %></li>
                               <%= render 'devise/menus/registration_items' %>
@@ -25,11 +25,10 @@
                               
                               <% if user_signed_in? %>
                               
-
                               <li><%= link_to('Ajouter Trajet', new_trajet_path) %></li>
                               <li><%= link_to('Trajets', new_trajet_path) %></li>
                               
-                                <%end%>
+                              <%end%>
                               <li><%= link_to "Contact", contact_path %></li>
 
  
@@ -47,7 +46,7 @@
             <div class="container">
                 <div class="col-md-8 col-md-offset-2 text-center">
 
-                    <h1>BUDDYCARE </h1>
+                    <h1>BUDDYCAR </h1>
                   <h2>A plusieurs c'est meilleur </h2>
                     <!--<p class="p-cls">-->
                   <br>
@@ -61,10 +60,13 @@
             </div>
         </div>
 
+<%= render 'popUP/popUpLogin' %>
       
-
       
-<div id="openModal" class="modalDialog">
+      
+      
+ <!--     
+<div id="login2" class="modalDialog">
 	<div>
 		<div class="panel-heading">
                         <h3 class="panel-title">Sign In</h3>
@@ -86,20 +88,19 @@
                                         <input name="remember" type="checkbox" value="Remember Me">Remember Me
                                     </label>
                                 </div>
-                                <!-- Change this to a button or input when using this as a form -->
                                 <a href="javascript:;" class="btn btn-sm btn-success">Login</a>
                             </fieldset>
                         </form>
                     </div>
                 </div>
-</div>
+</div>-->
 
 
       
     </div>
     <!--HOME SECTION END  -->
     <footer>
-        © 2015 BuddyCare.com  | <a href="http://www.designbootstrap.com/" target="_blank">by DesignBootstrap</a>
+        © 2015 BuddyCar.com  | <a href="http://www.designbootstrap.com/" target="_blank">by DesignBootstrap</a>
     </footer>
     
 
