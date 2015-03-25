@@ -24,12 +24,11 @@
                               <%= render 'devise/menus/login_items' %>
                               
                               <% if user_signed_in? %>
+                             
+                                  <li><%= link_to('Ajouter Trajet', new_trajet_path) %></li>
+                  <li><%= link_to('Trajets', trajets_path) %></li>
                               
-
-                              <li><%= link_to('Ajouter Trajet', new_trajet_path) %></li>
-                              <li><%= link_to('Trajets', new_trajet_path) %></li>
-                              
-                                <%end%>
+                              <%end%>
                               <li><%= link_to "Contact", contact_path %></li>
 
  

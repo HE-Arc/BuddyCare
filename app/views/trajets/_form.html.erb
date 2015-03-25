@@ -12,39 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :id %><br>
-    <%= f.number_field :id %>
-  </div>
-  <div class="field">
-    <%= f.label :userBeneficiaireID %><br>
-    <%= f.number_field :userBeneficiaireID %>
-  </div>
-  <div class="field">
-    <%= f.label :userAuteurID %><br>
-    <%= f.number_field :userAuteurID %>
-  </div>
-  <div class="field">
-    <%= f.label :departVille %><br>
+    <%= f.label :depart_Ville, "Ville de départ" %><br>
     <%= f.text_field :departVille %>
   </div>
   <div class="field">
-    <%= f.label :arriveeVille %><br>
+    <%= f.label :arriveeVille, "Ville d'arrivée" %><br>
     <%= f.text_field :arriveeVille %>
   </div>
   <div class="field">
-    <%= f.label :distance %><br>
+    <%= f.label :distance, "Distance [km]" %><br>
     <%= f.text_field :distance %>
   </div>
   <div class="field">
-    <%= f.label :prix %><br>
+    <%= f.label :prix, "Prix [frs]" %><br>
     <%= f.text_field :prix %>
   </div>
   <div class="field">
-    <%= f.label :nbPlacesDisponible %><br>
+    <%= f.label :nbPlacesDisponible, "Nombre de places disponible" %><br>
     <%= f.number_field :nbPlacesDisponible %>
   </div>
   <div class="field">
-    <%= f.label :date %><br>
+    <%= f.label :date, "Sélectionner une date" %><br>
     <%= f.datetime_select :date %>
   </div>
   <div class="actions">
