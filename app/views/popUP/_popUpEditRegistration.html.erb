@@ -1,0 +1,47 @@
+<div id="editRegistration" class="modalDialog">
+	<div>
+		<div class="panel-heading">
+                        <h3 class="panel-title">Edit Registration</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div>
+                          <span class="close"><a href="#">X</a></span>
+                      </div>
+                        <form accept-charset="UTF-8" action="/users" class="edit_user" id="edit_user" method="post">
+                          <div style="display:none">
+                          <input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" />
+                                                <input name="authenticity_token" type="hidden"/></div>
+
+                        <div class="field">
+                          <label for="user_pseudo">Pseudo</label><br />
+                          <input autofocus="autofocus" id="user_pseudo" name="user[pseudo]" type="text" value="test" />
+                        </div>
+
+                        <div class="field">
+                          <label for="user_email">Email</label><br />
+                          <input autofocus="autofocus" id="user_email" name="user[email]" type="email" value="test@test.test" />
+                        </div>
+
+
+                        <div class="field">
+                          <label for="user_password">Password</label> <i>(leave blank if you don't want to change it)</i><br />
+                          <input autocomplete="off" id="user_password" name="user[password]" type="password" />
+                        </div>
+
+                        <div class="field">
+                          <label for="user_password_confirmation">Password confirmation</label><br />
+                          <input autocomplete="off" id="user_password_confirmation" name="user[password_confirmation]" type="password" />
+                        </div>
+
+                        <div class="field">
+                          <label for="user_current_password">Current password</label> <i>(we need your current password to confirm your changes)</i><br />
+                          <input autocomplete="off" id="user_current_password" name="user[current_password]" type="password" />
+                        </div>
+
+                        <div class="actions">
+                          <input name="commit" type="submit" value="Update" />
+                        </div>
+                      </form>               
+                    </div>
+                </div>
+</div>

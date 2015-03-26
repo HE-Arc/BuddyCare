@@ -13,26 +13,19 @@
             </div>
             <div class="navbar-right">
                 <ul class="nav navbar-nav ">
-                    <!--<li><a href="#services">SERVICES</a></li>-->
-                    <!--<li><a href="#contact">CONTACT</a></li>-->
-                  <!--<li><%= link_to 'ACCUEIL', root_path %></li>
-                  <li><%= link_to 'CONTACT', contact_path %></li>-->
-                  <!--<li><%= link_to 'LOGIN' %></li>
-                    <a href="#openModal">LOGIN</a></li>-->
-                              <li><%= link_to "Home", root_path %></li>
-                              <%= render 'devise/menus/registration_items' %>
-                              <%= render 'devise/menus/login_items' %>
-                              
-                              <% if user_signed_in? %>
-                              
-                              <li><%= link_to('Ajouter Trajet', new_trajet_path) %></li>
-                              <li><%= link_to('Trajets', new_trajet_path) %></li>
-                              
-                              <%end%>
-                              <li><%= link_to "Contact", contact_path %></li>
+                  <li><%= link_to "Home", root_path %></li>
+                  <%= render 'devise/menus/registration_items' %>
+                  
 
- 
-                    <!--<li><a href="#" data-rel="popup3" class="poplight">LOGIN</a></li>-->
+                  <% if user_signed_in? %>
+
+                  <!--<li><%= link_to('Ajouter Trajet', new_trajet_path) %></li>-->
+                  <li><a href="#newTrajet" data-rel="popup3" class="poplight">Ajouter Trajet</a></li>
+                  <li><%= link_to('Trajets', new_trajet_path) %></li>
+
+                  <%end%>
+                  <%= render 'devise/menus/login_items' %>
+                  <li><%= link_to "Contact", contact_path %></li>
                 </ul>
             </div>
         </div>
@@ -51,16 +44,21 @@
                     <!--<p class="p-cls">-->
                   <br>
                   <br>
-                        <h3>Voyagez moins cher grâce à BuddyCare, un site de covoiturage totalement gratuit pour trouver vos meilleures destinations</h3>
+                        <h3>Voyagez moins cher grâce à BuddyCar, un site de covoiturage totalement gratuit pour trouver vos meilleures destinations</h3>
                   <br>
-                  <p><a><%= link_to 'REJOIGNEZ TOUT DE SUITE LA COMMUNAUTE', new_user_registration_path %></a></p>
+                  <p><a href="#registration" data-rel="popup3" class="poplight">REJOIGNEZ TOUT DE SUITE LA COMMUNAUTE</a></p>
                       
                 </div>
 
             </div>
         </div>
 
-<%= render 'popUP/popUpLogin' %>
+      <%= render 'popUP/popUpLogin' %>
+      <%= render 'popUP/popUpEditRegistration' %>
+      <%= render 'popUP/popUpRegistration' %>
+      <%= render 'popUP/popUpNewTrajet' %>
+      
+      
       
       
       
