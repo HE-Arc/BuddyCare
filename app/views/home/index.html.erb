@@ -46,8 +46,12 @@
                   <br>
                         <h3>Voyagez moins cher grâce à BuddyCar, un site de covoiturage totalement gratuit pour trouver vos meilleures destinations</h3>
                   <br>
+                  <% if user_signed_in? %>
+                  <p></p>
+                  <% else %>
                   <p><a href="#registration" data-rel="popup3" class="poplight">REJOIGNEZ TOUT DE SUITE LA COMMUNAUTE</a></p>
-                      
+                  <%end%>
+
                 </div>
 
             </div>

@@ -14,12 +14,12 @@
 
                         <div class="field">
                           <label for="user_pseudo">Pseudo</label><br />
-                          <input autofocus="autofocus" id="user_pseudo" name="user[pseudo]" type="text" value="test" />
+                          <input autofocus="autofocus" id="user_pseudo" name="user[pseudo]" type="text" value=<%= current_user.pseudo %> />
                         </div>
 
                         <div class="field">
                           <label for="user_email">Email</label><br />
-                          <input autofocus="autofocus" id="user_email" name="user[email]" type="email" value="test@test.test" />
+                          <input autofocus="autofocus" id="user_email" name="user[email]" type="email" value=<%= current_user.email %> />
                         </div>
 
 
