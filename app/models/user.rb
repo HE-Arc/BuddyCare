@@ -2,6 +2,11 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   acts_as_messageable
+  
+   def mailboxer_email(object)
+   #return the model's email here
+     return email
+  end
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :messages, :class_name => 'messages', :foreign_key => 'userDestination_id'
