@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'mailboxer'
+gem 'will_paginate'
 gem 'gmaps4rails'
 gem 'geocoder'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
