@@ -3,6 +3,10 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   acts_as_messageable
   
+  def name
+    return pseudo
+  end
+  
    def mailboxer_email(object)
    #return the model's email here
      return email

@@ -8,24 +8,8 @@ Rails.application.configure do
   Rails.application.routes.default_url_options[:host] = 'domain.com'
   # Do not eager load code on boot.
   config.eager_load = false
-  
-  require 'tlsmail'
-Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
-ActionMailer::Base.raise_delivery_errors = true
-ActionMailer::Base.perform_deliveries = true
-ActionMailer::Base.delivery_method = :smtp
 
-ActionMailer::Base.smtp_settings = {
-  :enable_starttls_auto => true,  #this is the important shit!
-  :address => 'smtp.gmail.com', #'localhost', 
-  :port => 587,
-  :tls => true,
-  :domain => 'mail.google.com',  # mail.customdomain.com if you use google apps
-  :authentication => :login,
-  :user_name => 'FernandesDa4@gmail.com',
-  :password => '_secret_password'
-} 
-  
+
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
