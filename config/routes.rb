@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   
   resources :trajets
-resources :conversations, only: [:index, :show, :destroy]
+resources :conversations, only: [:index, :show, :destroy] do
+  member do
+    post :reply
+  end
+end
   resources :messages, only: [:new, :create]
   #resources :messages
 
