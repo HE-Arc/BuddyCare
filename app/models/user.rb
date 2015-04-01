@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   
    def mailboxer_email(object)
    #return the model's email here
-     return email
+     email
   end
   
   has_many :messages, :class_name => 'messages', :foreign_key => 'userDestination_id'

@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   end
   
 resources :messages, only: [:new, :create]
+  
+  
   #resources :messages
 
   
