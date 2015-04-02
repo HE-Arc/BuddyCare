@@ -1,35 +1,16 @@
-<h1>Listing users</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Pseudo</th>
-      <th>Password</th>
-      <th>Email</th>
-      <th>Solde</th>
-      <th>Note</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.id %></td>
-        <td><%= user.pseudo %></td>
-        <td><%= user.password %></td>
-        <td><%= user.email %></td>
-        <td><%= user.solde %></td>
-        <td><%= user.note %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New User', new_user_path %>
+<h1>"Users" </h1>
+ 
+<%= will_paginate %>
+ 
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <strong><%= user.pseudo %></strong>
+      <% unless current_user == user %>
+        <%= link_to 'Send message', new_message_path(to: user.id), class: 'btn btn-default btn-sm' %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+ 
+<%= will_paginate %>
