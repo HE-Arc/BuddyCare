@@ -1,44 +1,44 @@
 <div id="registration" class="modalDialog">
 	<div>
 		<div class="panel-heading">
-                        <h3 class="panel-title center">S'inscrire</h3>
-                    </div>
-                    <div class="panel-body">
-                      <div>
-                          <span class="close"><a href="#">X</a></span>
-                      </div>
-                       <form accept-charset="UTF-8" action="/users" class="new_user" id="new_user" method="post">
-                         <div style="display:none">
-                         <input name="utf8" type="hidden" value="&#x2713;" />
-                         <input name="authenticity_token" type="hidden" /></div>
+      <h3 class="panel-title center">S'inscrire</h3>
+    </div>
+    <div class="panel-body">
+      <div>
+        <span class="close"><a href="#">X</a></span>
+      </div>
+      <form accept-charset="UTF-8" action="/users" class="new_user" id="new_user" method="post">
+        <div style="display:none">
+          <input name="utf8" type="hidden" value="&#x2713;" />
+          <input name="authenticity_token" type="hidden" /></div>
 
 
-                          <div class="field">
-                            <label for="user_pseudo">Pseudo</label><br />
-                            <input autofocus="autofocus" id="user_pseudo" name="user[pseudo]" type="text" value="" />
-                          </div>
+        <div class="field">
+          <label for="user_pseudo">Pseudo</label><br />
+          <input autofocus="autofocus" id="user_pseudo" name="user[pseudo]" type="text" value="" />
+        </div>
 
-                          <div class="field">
-                            <label for="user_email">E-mail</label><br />
-                            <input autofocus="autofocus" id="user_email" name="user[email]" type="email" />
-                          </div>
+        <div class="field">
+          <label for="user_email">E-mail</label><br />
+          <input autofocus="autofocus" id="user_email" name="user[email]" type="email" />
+        </div>
 
-                          <div class="field">
-                            <label for="user_password">Mot de passe</label>
-                            <em>(Minimum 8 caractères)</em>
-                            <br />
-                            <input autocomplete="off" id="user_password" name="user[password]" type="password" />
-                          </div>
+        <div class="field">
+          <label for="user_password">Mot de passe</label>
+          <em>(Minimum 8 caractères)</em>
+          <br />
+          <input autocomplete="off" id="user_password" name="user[password]" type="password" />
+        </div>
 
-                          <div class="field">
-                            <label for="user_password_confirmation">Confirmer mot de passe</label><br />
-                            <input autocomplete="off" id="user_password_confirmation" name="user[password_confirmation]" type="password" />
-                          </div>
+        <div class="field">
+          <label for="user_password_confirmation">Confirmer mot de passe</label><br />
+          <input autocomplete="off" id="user_password_confirmation" name="user[password_confirmation]" type="password" />
+        </div>
 
-                          <div class="actions">
-                            <input name="commit" type="submit" value="Sign up" />
-                          </div>
-                        </form>              
-                    </div>
-                </div>
+        <div class="actions">
+          <input name="commit" type="submit" value="Valider" />
+        </div>
+      </form>              
+    </div>
+  </div>
 </div>

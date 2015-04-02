@@ -4,7 +4,6 @@
   <title>DevWebRails</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -19,34 +18,22 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <!--<img src="/assets/images/audio.png" alt="" />-->
                 </a>
             </div>
             <div class="navbar-right">
                 <ul class="nav navbar-nav ">
                   <li><%= link_to "Accueil", root_path %></li>
                   <%= render 'devise/menus/registration_items' %>
-                  
-
                   <% if user_signed_in? %>
-
-                  <!--<li><%= link_to('Ajouter Trajet', new_trajet_path) %></li>-->
-                  <li><a href="/#newTrajet" data-rel="popup3" class="poplight">Ajouter Trajet</a></li>
-                  <li><%= link_to('Trajets', trajets_path) %></li>
-                  <li><%= link_to 'Messages', conversations_path %></li>
-
+                    <li><a href="/#newTrajet" data-rel="popup3" class="poplight">Ajouter Trajet</a></li>
+                    <li><%= link_to('Trajets', trajets_path) %></li>
+                    <li><%= link_to 'Messages', conversations_path %></li>
                   <%end%>
                   <%= render 'devise/menus/login_items' %>
                 </ul>
             </div>
         </div>
     </div>
-  
-  
-  
 <%= yield %>
-  
-  
-
 </body>
 </html>

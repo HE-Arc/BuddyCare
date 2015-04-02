@@ -9,12 +9,4 @@ s << "<option value='#{user.id}' data-img-src='#{gravatar_image_url(user.email, 
   s.html_safe
 end
 
-
-
-def try
-  s = ''
-  s << "#{current_user.pseudo}"
-    s.html_safe
-
-end
 end
