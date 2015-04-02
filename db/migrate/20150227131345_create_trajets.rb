@@ -9,6 +9,7 @@ class CreateTrajets < ActiveRecord::Migration
       t.float :prix
       t.integer :nbPlacesDisponible
       t.datetime :date
+      t.references :user, index: true
 
       t.timestamps
     end

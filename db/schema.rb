@@ -107,6 +107,7 @@ ActiveRecord::Schema.define(version: 20150331163551) do
     t.float    "prix"
     t.integer  "nbPlacesDisponible"
     t.datetime "date"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "latitude"
@@ -114,6 +115,8 @@ ActiveRecord::Schema.define(version: 20150331163551) do
     t.float    "latitudeArrivee"
     t.float    "longitudeArrivee"
   end
+
+  add_index "trajets", ["user_id"], name: "index_trajets_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "password"

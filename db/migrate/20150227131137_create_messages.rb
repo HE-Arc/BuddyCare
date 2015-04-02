@@ -5,6 +5,7 @@ class CreateMessages < ActiveRecord::Migration
       t.integer :userDestinationID
       t.string :objetMessage
       t.string :message
+      
 
       t.timestamps
     end

@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.float :solde
       t.decimal :note
+      
 
       t.timestamps
     end
