@@ -56,11 +56,8 @@ function calcRoute() {
   var origin      = new google.maps.LatLng(<%= @trajet.latitude %>, <%= @trajet.longitude %>);
   var destination = new google.maps.LatLng(<%= @trajet.latitudeArrivee %>, <%= @trajet.longitudeArrivee %>);
   var service = new google.maps.DistanceMatrixService();
-  var distance = calcDistance(origin, destination);
-  window.alert(distance);
-  var coords = [];
-
-        
+  window.alert(calcDistance(origin, destination));
+  
   var request = {
       origin:      origin,
       destination: destination,
@@ -73,10 +70,12 @@ function calcRoute() {
     }
   });
 }
-  function calcDistance(p1, p2){
-    //Calculate the distance according to latitude and longitude
-    return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2);   
-  }
+  
+function calcDistance(p1, p2){
+  //Calculate the distance according to latitude and longitude
+  
+  return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2);   
+}
 
 calcRoute();
 
