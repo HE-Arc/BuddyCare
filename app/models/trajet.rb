@@ -25,7 +25,7 @@ def saveCitiesCoord
     Math.sin(dLon / 2) * Math.sin(dLon / 2)
   c = 2 * Math.asin((Math.sqrt(a)))
   d = r * c
-  self.distance = d
+  self.distance = d.round(2)
 end
 
 end
