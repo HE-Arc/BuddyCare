@@ -32,10 +32,14 @@
   <%= @trajet.date %>
 </p>
 </div>
-  
+  <% if current_user.pseudo == @trajet.user.pseudo %>
+  <p></p>
+<% else %>
   <div align="center">
     <p><%= link_to 'Contacter '+ @trajet.user.pseudo.upcase, new_message_path(to: @trajet.user.id), class: 'btn btn-lg btn-primary' %></p>
 </div>
+<% end %>
+  
 </div>
 <div class="col-xs-12 col-sm-12 col-md-12">
     <div  class="embed-responsive embed-responsive-16by9">

@@ -11,10 +11,6 @@ class User < ActiveRecord::Base
      email
   end
   
-  #has_many :messages, :class_name => 'messages', :foreign_key => 'userDestination_id'
-  #has_many :messages, :class_name => 'messages', :foreign_key => 'userSource_id'
-  
   has_many :trajets, dependent: :destroy
-  #belongs_to :trajets, :class_name => 'trajets', :foreign_key => 'userBeneficiaire_id'
    
 end
