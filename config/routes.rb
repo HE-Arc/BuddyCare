@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :messages, only: [:new, :create]
   # You can have the root of your site routed with "root"
   #root 'home#index'
-  root 'buddycar#index'
+  root 'home#index'
   #resources :messages
 
   
