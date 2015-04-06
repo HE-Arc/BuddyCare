@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
-    <!--<li><a href="#editRegistration" data-rel="popup3" class="poplight">Editer profil</a></li>-->
-<li><%= link_to('Editer profil', edit_user_registration_path) %></li>
+    <li><a href="#editRegistration" data-rel="popup3" class="poplight">Editer profil</a></li>
+<!--<li><%= link_to('Editer profil', edit_user_registration_path) %></li>-->
 <% else %>
-    <!--<li><a href="#registration" data-rel="popup3" class="poplight">S'inscrire</a></li>-->
-<li><%= link_to('S\'inscrire', new_user_registration_path) %></li>
+    <li><a href="#registration" data-rel="popup3" class="poplight">S'inscrire</a></li>
+<!--<li><%= link_to('S\'inscrire', new_user_registration_path) %></li>-->
 <% end %>
