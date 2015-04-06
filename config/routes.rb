@@ -1,13 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  
-  devise_scope :user do
-    get "users/sign_in" => "devise/sessions#new"
-    get "users/sign_up" => "devise/registrations#new"
-    get "users/edit" => "devise/registrations#edit"
-    
-  end
-  
+
   resources :trajets
   
   resources :conversations, only: [:index, :show, :destroy] do
