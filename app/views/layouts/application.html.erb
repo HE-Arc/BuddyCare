@@ -28,7 +28,7 @@
                   <% if user_signed_in? %>
                     <li><a href="#newTrajet" data-rel="popup3" class="poplight">Ajouter Trajet</a></li>
                   <!--<li><%= link_to('Ajouter Trajet', new_trajet_path) %></li>-->
-                    <li><%= link_to('Trajets', trajets_path) %></li>
+                    <li><%= link_to 'Trajets', trajets_path %></li>
                     <li><%= link_to 'Messages', conversations_path %></li>
                   <%end%>
                   <li><%= render 'devise/menus/login_items' %></li>
