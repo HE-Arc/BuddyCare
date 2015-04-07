@@ -26,7 +26,7 @@ class TrajetsController < ApplicationController
   def create
     @trajet = Trajet.new(trajet_params)
     @trajet.user_id = current_user.id
-    respond_to do |format|
+    
       if @trajet.save
         format.html { redirect_to @trajet, notice: 'Trajet was successfully created.' }
         format.json { render :show, status: :created, location: @trajet }
