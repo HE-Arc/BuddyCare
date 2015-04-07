@@ -25,10 +25,8 @@ class TrajetsController < ApplicationController
   # POST /trajets.json
   def create
     
-    @trajet = Trajet.new(trajet_params)
-    @user = current_user
-    @trajet.user_id = @user.id
-    
+    @trajet = Trajet.new(trajet_params.merge(:user_id => current_user.id))
+
     respond_to do |format|
       if @trajet.save
         format.html { redirect_to @trajet, notice: 'Trajet was successfully created.' }
