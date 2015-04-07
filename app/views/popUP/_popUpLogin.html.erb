@@ -7,9 +7,8 @@
                       <div>
                           <span class="close"><a href="#">X</a></span>
                       </div>
-                      <% result = request.env['REQUEST_URI'].split("/")%>
-                      <% test = result[result.length-1]%>
-                      <%=result.length%>
+                      <% result = request.env['REQUEST_URI']%>
+                      <%=result%>
                      
                         <form accept-charset="UTF-8" action="buddycar/users/sign_in" class="new_user" id="new_user" method="post">
                         
