@@ -9,8 +9,6 @@
                       </div>
                       <% result = request.env['REQUEST_URI']%>
                       <% test = result[result.length-1]%>
-                      <%=test%>
-                      <%=request.env['PATH_INFO']%>
                       <% if test != "/"%>
                         <form accept-charset="UTF-8" action="buddycar/users/sign_in" class="new_user" id="new_user" method="post">
                       <% else %>
