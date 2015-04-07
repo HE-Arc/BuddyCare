@@ -44,7 +44,6 @@
 <script type="text/javascript">
 var directionsDisplay = new google.maps.DirectionsRenderer();
 var directionsService = new google.maps.DirectionsService();
-
 function calcRoute() {
   var origin      = new google.maps.LatLng(<%= @trajet.latitude %>, <%= @trajet.longitude %>);
   var destination = new google.maps.LatLng(<%= @trajet.latitudeArrivee %>, <%= @trajet.longitudeArrivee %>);
@@ -62,9 +61,7 @@ function calcRoute() {
     }
   });
 }
-
 calcRoute();
-
 var handler = Gmaps.build('Google');
 handler.buildMap({ internal: {id: 'directions'}}, function(){
   directionsDisplay.setMap(handler.getMap());
