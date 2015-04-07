@@ -11,8 +11,11 @@
                       <% test = result[result.length-1]%>
                       <%=test%>
                       <%=request.env['PATH_INFO']%>
-                     
+                      <% if test != "/"%>
                         <form accept-charset="UTF-8" action="buddycar/users/sign_in" class="new_user" id="new_user" method="post">
+                      <% else %>
+                        <form accept-charset="UTF-8" action="/users/sign_in" class="new_user" id="new_user" method="post">
+                       <% end %>
                           <div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" />
                               <input name="authenticity_token" type="hidden" />
                           </div>
