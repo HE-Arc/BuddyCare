@@ -11,6 +11,7 @@
       <th>Prix [francs]</th>
       <th>Nombre de place disponible</th>
       <th>Date de départ</th>
+      <th>Utilisateur</th>
     </tr>
 
 
@@ -25,7 +26,10 @@
         <td><%= trajet.prix %></td>
         <td><%= trajet.nbPlacesDisponible %></td>
         <td><%= trajet.date %></td>  
+      <td><%=User.find(trajet.userAuteurID).pseudo.upcase%></td>
+      
     </tr>
     <% end %>
+    
   </tbody>
 </table>
