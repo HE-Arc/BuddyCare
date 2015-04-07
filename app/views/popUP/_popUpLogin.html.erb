@@ -7,7 +7,12 @@
                       <div>
                           <span class="close"><a href="#">X</a></span>
                       </div>
-                        <form accept-charset="UTF-8" action="buddycar/users/sign_in" class="new_user" id="new_user" method="post">
+                      <% result = request.env['REQUEST_URI'].split("/")%>
+                      <% test = result[result.length-1]%>
+                      <%=test%>
+                     
+                        <form accept-charset="UTF-8" action="/users/sign_in" class="new_user" id="new_user" method="post">
+                        
                           <div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" />
                               <input name="authenticity_token" type="hidden" />
                           </div>
