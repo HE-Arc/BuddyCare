@@ -1,5 +1,9 @@
 class Trajet < ActiveRecord::Base
   belongs_to :user
+  validates :departVille, presence: true
+  validates :arriveeVille, presence: true
+  validates :prix, :numericality => {:greater_than_or_equal_to => 0}
+  validates :nbPlacesDisponible, :numericality => {:greater_than_or_equal_to => 1}
 
   before_save :saveCitiesCoord
 
