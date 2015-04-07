@@ -24,16 +24,13 @@ class TrajetsController < ApplicationController
   # POST /trajets
   # POST /trajets.json
   def create
-    
-    @trajet = Trajet.new(trajet_params.merge(:user_id => current_user.id))
-
+    @trajet = Trajet.new(trajet_params)
+    @trajet.user_id = current_user.id
     respond_to do |format|
       if @trajet.save
         format.html { redirect_to @trajet, notice: 'Trajet was successfully created.' }
-        format.json { render :show, status: :created, location: @trajet }
       else
         format.html { render :new }
-        format.json { render json: @trajet.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -70,6 +67,6 @@ class TrajetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trajet_params
-      params.require(:trajet).permit(:id, :user_id, :userBeneficiaireID, :userAuteurID, :departVille, :arriveeVille, :distance, :prix, :nbPlacesDisponible, :date)
+      params.require(:trajet).permit(:id, :userBeneficiaireID, :userAuteurID, :departVille, :arriveeVille, :distance, :prix, :nbPlacesDisponible, :date)
     end
 end
