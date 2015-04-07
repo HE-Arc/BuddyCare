@@ -11,7 +11,10 @@
                       
                       <% result = request.env['REQUEST_URI']%>
                       <% test = result[result.length-1]%>
-                      <% if test != "/"%>
+                      <% tab = result.split("/")%>
+                      <% test2 = tab[tab.length-1]%>
+                      
+                      <% if test != "/" && test2 == "buddycar"%>
                         <form accept-charset="UTF-8" action="buddycar/users" class="edit_user" id="edit_user" method="post">
                       <% else %>
                         <form accept-charset="UTF-8" action="users" class="edit_user" id="edit_user" method="post">
