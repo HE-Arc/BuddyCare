@@ -33,6 +33,14 @@
   <strong>Date de départ : </strong>
   <%= @trajet.date %>
 </p>
+  
+  <% if current_user.pseudo == User.find(@trajet.userAuteurID).pseudo %>
+  <p></p>
+<% else %>
+  <div align="center">
+    <p><%= link_to 'Contacter '+ User.find(@trajet.userAuteurID).pseudo.upcase, new_message_path(to: @trajet.userAuteurID), class: 'btn btn-lg btn-primary' %></p>
+</div>
+<% end %>
   <p>
   <strong>User : </strong>
     <%= User.find(@trajet.userAuteurID).pseudo %>
