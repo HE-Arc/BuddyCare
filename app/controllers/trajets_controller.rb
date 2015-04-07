@@ -25,6 +25,7 @@ class TrajetsController < ApplicationController
   # POST /trajets.json
   def create
     @trajet = Trajet.new(trajet_params)
+    @trajet.user_id = current_user.id
     
     if @trajet.save
       redirect_to @trajet
@@ -65,6 +66,6 @@ class TrajetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trajet_params
-      params.require(:trajet).permit(:departVille, :arriveeVille, :distance, :prix, :nbPlacesDisponible, :date).merge(user_id: current_user.id)
+      params.require(:trajet).permit(:departVille, :arriveeVille, :distance, :prix, :nbPlacesDisponible, :date)
     end
 end

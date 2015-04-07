@@ -4,6 +4,7 @@ class Trajet < ActiveRecord::Base
   before_save :saveCitiesCoord
 
 def saveCitiesCoord
+  
   city1 = Geocoder.coordinates(self.departVille)
   city2 = Geocoder.coordinates(self.arriveeVille)
   
