@@ -69,6 +69,6 @@ class TrajetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trajet_params
-      params.require(:trajet).permit(:id, :user_id, :userBeneficiaireID, :userAuteurID, :departVille, :arriveeVille, :distance, :prix, :nbPlacesDisponible, :date)
+      params.require(:trajet).permit(:id, :userBeneficiaireID, :userAuteurID, :departVille, :arriveeVille, :distance, :prix, :nbPlacesDisponible, :date)
     end
 end
