@@ -9,11 +9,10 @@
                       </div>
                       <% result = request.env['REQUEST_URI']%>
                       <% test = result[result.length-1]%>
-                      <% if test != "/"%>
+                      <% tab = result.split("/")%>
+                      <% test2 = tab[tab.length-1]%>
+                      
                         <form accept-charset="UTF-8" action="/trajets" class="new_trajet" id="new_trajet" method="post">
-                      <% else %>
-                        <form accept-charset="UTF-8" action="trajets" class="new_trajet" id="new_trajet" method="post">
-                      <% end %>
                         <div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" />
                           <input name="authenticity_token" type="hidden"  />
                         </div>
