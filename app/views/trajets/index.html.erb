@@ -17,7 +17,6 @@
 
   <tbody>
     <% @trajets.each do |trajet| %>
-    
     <tr onclick="document.location='trajets/<%=trajet.id%>'" style="cursor:pointer" onmouseover="this.style.backgroundColor='#006db9'" onmouseout="this.style.backgroundColor=''">
         
         <td><%= trajet.departVille %></td>
@@ -27,8 +26,16 @@
         <td><%= trajet.nbPlacesDisponible %></td>
         <td><%= trajet.date %></td>  
       <td><%=User.find(trajet.userAuteurID).pseudo.upcase%></td>
-      
+      <% if current_user.pseudo == User.find(trajet.userAuteurID).pseudo %>
+      <td><%= link_to 'Supprimer', trajet_path(trajet.id),
+  class: 'btn btn-xs btn-info', method: :delete %></td>
+<% else %>
+  
+      <td><p></p></td>
+<% end %>
     </tr>
+    
+    
     <% end %>
     
   </tbody>
