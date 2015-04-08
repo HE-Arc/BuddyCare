@@ -3,7 +3,7 @@ class SessionsController < DeviseController
   prepend_before_filter :allow_params_authentication!, :only => :create
   prepend_before_filter { request.env["devise.skip_timeout"] = true }
   
-
+before_filter :configure_permitted_parameters
 
   prepend_view_path 'app/views/devise'
 
