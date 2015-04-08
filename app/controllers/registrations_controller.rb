@@ -3,7 +3,7 @@ class RegistrationsController < DeviseController
   prepend_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
   prepend_before_filter :authenticate_scope!, :only => [:edit, :update, :destroy]
 
-  before_filter :configure_permitted_parameters
+  
 
   prepend_view_path 'app/views/devise'
 
@@ -58,7 +58,7 @@ class RegistrationsController < DeviseController
 
   # DELETE /resource
   def destroy
-    resource.destroy
+    resource.soft_delete
     Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
     set_flash_message :notice, :destroyed if is_navigational_format?
     respond_with_navigational(resource){ redirect_to after_sign_out_path_for(resource_name) }
