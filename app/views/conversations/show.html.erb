@@ -1,4 +1,4 @@
-<h1>Message</h1>
+<h1>Discussion</h1>
  
 <p>Vous discutez avec
   <%= render 'conversations/participants', conversation: @conversation %>
@@ -17,9 +17,9 @@
           </div>
  
           <div class="media-body">
-            <h6 class="media-heading"><%= message.sender.pseudo %>
+            <h6 class="media-heading"><strong><h5><%= message.sender.pseudo %></h5></strong>
               says at <%= message.created_at.strftime("%-d %B %Y, %H:%M:%S") %></h6>
-            <%= message.body %>
+            <h4><%= message.body %></h4>
           </div>
         </div>
       <% end %>
